@@ -1,7 +1,8 @@
 <%= link_to "Create new Portfolio", new_portofolio_path %>
-
-<h1> aA</h1>
+<h1>Portfolios</h1>
 <% @portfolio_items.each do |item|%>
-	<p><%=item.title%></p>
-	<%= link_to "Edit", edit_portofolio_path(item.id)%>
+<p>	
+	<%=link_to item.title, portofolios_path(item)%>
+	<%= link_to "Edit", edit_portofolio_path(item.id)%>		
+</p>
 <%end%>
