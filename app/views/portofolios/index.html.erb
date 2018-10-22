@@ -4,5 +4,6 @@
 <p>	
 	<%=link_to item.title, portofolios_path(item)%>
 	<%= link_to "Edit", edit_portofolio_path(item.id)%>		
+	<%= link_to "Delete", portofolio_path(item.id), method: :delete%>		
 </p>
 <%end%>

@@ -5,6 +5,10 @@ class PortofoliosController < ApplicationController
   def show 
     @portofolio_item = Portofolio.find(params[:id])
   end
+  def destroy
+    @portofolio_item = Portofolio.find(params[:id])
+    @portofolio_item.destroy 
+  end
 	def new
 		@portfolio_item = Portofolio.new 
 	end
