@@ -1,9 +1,9 @@
 <%= link_to "Create new Portfolio", new_portofolio_path %>
-<h1>Portfolios</h1>
-<% @portfolio_items.each do |item|%>
-<p>	
-	<%=link_to item.title, portofolios_path(item)%>
-	<%= link_to "Edit", edit_portofolio_path(item.id)%>		
-	<%= link_to "Delete", portofolio_path(item.id), method: :delete%>		
-</p>
+	<h1>Portfolios</h1>
+	<% @portfolio_items.each do |item|%>
+		<p>	
+			<%=link_to item.title, portofolios_path(item)%>
+			<%= link_to "Edit", edit_portofolio_path(item.id)%>		
+			<%= link_to "Delete", portofolio_path(item.id), method: :delete%>		
+		</p>
 <%end%>
